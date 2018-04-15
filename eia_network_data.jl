@@ -1,0 +1,216 @@
+alledges = [
+["SCL",["PSEI","BPAT","AVA"]],
+["CHPD",["PSEI","DOPD","AVA","BPAT"]],
+["DOPD",["CHPD","BPAT"]],
+["GWA",["NWMT"]],
+["WWA",["NWMT"]],
+["WAUW",["NWMT","WACM","SWPP"]],
+["PSEI",["SCL","TPWR","BPAT","GCPD","AVA","CHPD"]],
+["AVA",["IPCO","NWMT","CHPD","SCL","PSEI","GCPD","BPAT","PACW"]],
+["TPWR",["BPAT","PSEI"]],
+["GCPD",["AVA","PSEI","PACW","BPAT"]],
+["NWMT",["WAUW","WWA","GWA","AVA","BPAT","IPCO","PACE"]],
+["GRID",["BPAT"]],
+["PGE",["BPAT","PACW"]],
+["BPAT",["IPCO","NWMT","AVA","GCPD","GRID","DOPD","CHPD","PSEI","SCL","TPWR","PGE","PACW","BANC","CISO","LDWP","NEVP"]],
+["PACW",["PGE","BPAT","AVA","IPCO","PACE","CISO","GCPD"]],
+["IPCO",["NWMT","AVA","BPAT","PACW","NEVP","PACE"]],
+["INSE",["NYIS"]],
+["NYIS",["INSE","PJM"]],
+["MISO",["SWPP","AECI","SPA","AEC","SOCO","TVA","EEI","LGEE","PJM"]],
+["PACE",["NWMT","WACM","AZPS","SRP","LDWP","NEVP","IPCO","PACW"]],
+["WACM",["SWPP","WAUW","PACE","AZPS","SRP","PNM","PSCO","WALC"]],
+["PJM",["NYIS","CPLE","DUK","CPLW","TVA","LGEE","OVEC","MISO"]],
+["BANC",["TIDC","CISO","BPAT"]],
+["NEVP",["PACE","IPCO","BPAT","CISO","LDWP","WALC"]],
+["AECI",["MISO","SWPP","SPA","TVA"]],
+["SWPP",["MISO","AECI","SPA","ERCO","EPE","PNM","PSCO","WACM","WAUW"]],
+["PSCO",["SWPP","WACM","PNM"]],
+["TIDC",["CISO","BANC"]],
+["OVEC",["PJM","LGEE"]],
+["LGEE",["OVEC","PJM","TVA","EEI","MISO"]],
+["EEI",["TVA","MISO","LGEE"]],
+["CISO",["TIDC","BANC","PACW","BPAT","NEVP","LDWP","AZPS","IID","SRP","WALC"]],
+["LDWP",["AZPS","WALC","PACE","NEVP","BPAT","CISO"]],
+["WALC",["IID","LDWP","CISO","NEVP","WACM","AZPS","SRP","GRIF","TEPC"]],
+["SPA",["AECI","SWPP","MISO"]],
+["TVA",["AECI","MISO","EEI","LGEE","PJM","CPLW","DUK","SOCO"]],
+["CPLW",["TVA","PJM","DUK"]],
+["DUK",["PJM","CPLW","TVA","SOCO","SEPA","SC","CPLE","YAD","SCEG"]],
+["YAD",["CPLE","DUK"]],
+["CPLE",["YAD","DUK","SC","SCEG","PJM"]],
+["GRIF",["WALC"]],
+["AZPS",["IID","CISO","LDWP","WALC","PACE","WACM","TEPC","PNM","GRMA"]],
+["PNM",["AZPS","SRP","TEPC","EPE","GRIS","SWPP","PSCO","WACM"]],
+["IID",["CISO","AZPS","WALC"]],
+["HGMA",["SRP"]],
+["DEAA",["SRP"]],
+["SRP",["WALC","WACM","PNM","TEPC","HGMA","DEAA","CISO","PACE"]],
+["GRIS",["PNM"]],
+["SEPA",["DUK","SC","SCEG","SOCO"]],
+["SC",["CPLE","DUK","SEPA","SOCO","SCEG"]],
+["GRMA",["AZPS"]],
+["EPE",["TEPC","PNM","SWPP"]],
+["SOCO",["AEC","MISO","TVA","DUK","SEPA","SC","SCEG","FPC","TAL","FPL"]],
+["SCEG",["CPLE","SC","DUK","SEPA","SOCO"]],
+["TEPC",["SRP","EPE","AZPS","WALC","PNM"]],
+["ERCO",["SWPP"]],
+["AEC",["SOCO","MISO"]],
+["TAL",["SOCO","FPC"]],
+["JEA",["FPL","FMPP","SEC"]],
+["GVL",["FPC","FPL"]],
+["FPC",["NSB","FPL","SOCO","TAL","GVL","SEC","TEC","FMPP"]],
+["SEC",["JEA","TEC","FPL","FPC"]],
+["NSB",["FPL","FPC"]],
+["FMPP",["FPL","JEA","FPC","TEC"]],
+["TEC",["FMPP","FPC","SEC","FPL"]],
+["FPL",["FPC","JEA","SEC","TEC","GVL","SOCO","NSB","FMPP","HST"]],
+["HST",["FPL"]]
+]
+
+xy = [5 10
+7 9
+8 9.5
+13 9
+15 8.5
+17.5 9.5
+6.5 10.5
+9.5 10.5
+5.5 11.5
+8.5 11.5
+15.5 11.5
+8.2 12
+5 13.5
+7.5 13.5
+6.5 15
+12 15
+49 13.5
+45 15.5
+31.5 17.5
+15.5 18
+20 18.5
+41 20
+5 20
+10.5 20
+30.5 20.5
+25.5 21.5
+20.5 21
+6.5 21.5
+38 20
+37 21
+33.5 22
+8 22.5
+9.2 23.5
+12.5 23
+30.5 23
+35.5 24
+39 23.5
+40.5 24
+42 23
+43.5 24
+12.5 24
+14.5 25
+18.5 24.5
+11 26
+12.5 25.5 
+13 26
+14.5 26
+20 25.5
+39 25.5
+41.5 25.5
+13.5 26.5
+19 27
+36.5 27
+40.5 26.5
+15.5 27.5
+25 28.8
+34.5 28
+37.5 29
+39.5 29
+39 29.5
+39.5 30
+39 30.5
+40.5 30.2
+40 31
+39 31.5
+40.5 32
+41 33.5 ]
+
+
+labels = [
+"SCL"
+"CHPD"
+"DOPD"
+"GWA"
+"WWA"
+"WAUW"
+"PSEI"
+"AVA"
+"TPWR"
+"GCPD"
+"NWMT"
+"GRID"
+"PGE"
+"BPAT"
+"PACW"
+"IPCO"
+"INSE"
+"NYIS"
+"MISO"
+"PACE"
+"WACM"
+"PJM"
+"BANC"
+"NEVP"
+"AECI"
+"SWPP"
+"PSCO"
+"TIDC"
+"OVEC"
+"LGEE"
+"EEI"
+"CISO"
+"LDWP"
+"WALC"
+"SPA"
+"TVA"
+"CPLW"
+"DUK"
+"YAD"
+"CPLE"
+"GRIF"
+"AZPS"
+"PNM"
+"IID"
+"HGMA"
+"DEAA"
+"SRP"
+"GRIS"
+"SEPA"
+"SC"
+"GRMA"
+"EPE"
+"SOCO"
+"SCEG"
+"TEPC"
+"ERCO"
+"AEC"
+"TAL"
+"JEA"
+"GVL"
+"FPC"
+"SEC"
+"NSB"
+"FMPP"
+"TEC"
+"FPL"
+"HST"]
+
+
+
+
+
+
+
+
+
